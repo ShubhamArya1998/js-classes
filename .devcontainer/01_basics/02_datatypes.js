@@ -19,7 +19,7 @@ let country=null
 // bigint
 // string => ""
 // boolean => true/false
-// null => standalone value "null is used when we intentinally don't want to give balue to the variable
+// null => standalone value "null is used when we intentionally don't want to give value to the variable
 // undefined => 
 // symbol => unique
 
