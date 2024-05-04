@@ -13,8 +13,8 @@ let anotherUser=userName //giving value to 2 variable of 1st one
     Age:26
  }
 
-let userTwo=userOne  //we are creating 2nd user and give it reference of 1st user
+let userTwo=userOne  //Both userOne and userTwo now reference the same object in memory. we are creating 2nd user only not object which we can say reference which will refer to same object in memory as userOne.
 
-userTwo.email="arya@gmail.com" //here we are updating one of its key value pair which will update user one email also due to its property of heap memory and whenever we will print both user the key value pair which has updated or changed will give same output for both users. 
+userTwo.email="arya@gmail.com" // Updates the email property of the shared object. Here we are updating one of its key value pair which will update user one email as we are poiting to same object in both user and whenever we will print both user the proerty which is updated or changed will give reflect in both userOne & userTwo as they are pointing to same object . 
 console.log(userOne.email)
-console.log(userTwo.email);
+console.log(userTwo.email)
