@@ -1,0 +1,85 @@
+innerText will only give the text written inside the element 
+textContent will give the text written inside the element including which are hide by applying some css properties
+innerHTML will give element also which are written like h1,span etc
+
+
+(1)`innerText`
+Description: Returns the visible text content of an element and its descendants.
+Behavior: Takes CSS into account, meaning it does not include text from hidden elements (elements with display: none or visibility: hidden). 
+
+=Example:
+
+let visibleText = document.getElementById('example').innerText;
+console.log(visibleText);
+
+
+
+(2) `textContent`
+Description: Returns the text content of an element and all its descendants.
+Behavior: Does not take CSS into account, meaning it includes all text, even from hidden elements.
+= Example:
+
+let allText = document.getElementById('example').textContent;
+console.log(allText);
+
+
+(3) `innerHTML`
+Description: Returns the HTML content (including tags) of an element and its descendants.
+Behavior: Provides a string containing the HTML structure, allowing access to the tags and their attributes.
+= Example:
+
+let htmlContent = document.getElementById('example').innerHTML;
+console.log(htmlContent);
+
+
+#######Examples to Illustrate Differences
+Let's consider the following HTML structure:
+
+html
+Copy code
+<div id="example">
+  <h1>Title</h1>
+  <span style="display:none">Hidden Text</span>
+  <p>Visible Text</p>
+</div>
+
+#Using innerText:
+
+let innerText = document.getElementById('example').innerText;
+console.log(innerText); // Outputs: "Title\nVisible Text"
+Only the visible text is returned.
+"Hidden Text" is not included because it's hidden by CSS.
+
+
+
+#Using textContent:
+
+let textContent = document.getElementById('example').textContent;
+console.log(textContent); // Outputs: "Title\nHidden Text\nVisible Text"
+All text content, including the hidden "Hidden Text", is returned.
+
+
+
+#Using innerHTML:
+
+
+let innerHTML = document.getElementById('example').innerHTML;
+console.log(innerHTML);
+// Outputs: "<h1>Title</h1>\n<span style=\"display:none\">Hidden Text</span>\n<p>Visible Text</p>"
+The entire HTML structure within the div is returned, including tags and their attributes.
+
+
+########Conclusion
+innerText: Best for getting or setting the visible text as rendered by the browser, considering CSS.
+textContent: Best for getting or setting the full text content regardless of CSS.
+innerHTML: Best for getting or setting the HTML structure, including tags and attributes.
+These properties serve different purposes, and their use depends on what specific aspect of the content you need to manipulate or retrieve.
+
+
+
+
+
+
+
+
+
