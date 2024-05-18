@@ -6,3 +6,4 @@ let accountState="MP"
 console.log(accountState)
 //using console.table to print values of variable together in table form instead of individual
 console.table([accountName,accountid,accountCity,accountEmail]);
+
